@@ -121,7 +121,7 @@ function toggleUserMenu() {
   userMenuOpen.value = !userMenuOpen.value;
 }
 
-// simple logout stub
+// 로그아웃
 function logout() {
   user.value = null;
   userMenuOpen.value = false;
@@ -129,7 +129,6 @@ function logout() {
   router.push('/');
 }
 
-// close menu on outside click or ESC
 function onKeydown(e) {
   if (e.key === 'Escape') {
     mobileOpen.value = false;
@@ -154,7 +153,7 @@ onBeforeUnmount(() => {
   opacity: 0;
 }
 
-/* mobile slide */
+/* 모바일 슬라이드 부분 CSS */
 .slide-fade-enter-active {
   transition: all .18s cubic-bezier(.2,.8,.2,1);
 }
