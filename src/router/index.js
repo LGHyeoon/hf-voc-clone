@@ -6,16 +6,16 @@ const routes = [
   { path: "/", name: "Home", component: Home },
   { path: "/my-vocs", name: "myVoc", component: Register },
   { path: "/login", name: "login", component: Register },
-  { path: "/register", name: "Register", component: Register },
-  { path: "/voc/register", name: "VocRegister", component: Register },
-  { path: "/voc/status", name: "VocStatus", component: Register },
-  { path: "/voc/faq", name: "VocFaq", component: Register },
+  { path: "/register", name: "register", component: Register },
+  { path: "/voc/question", name: "vocQuestion", component: Register },
+  { path: "/voc/complain", name: "vocComplain", component: Register },
+  { path: "/voc/praise", name: "vocPraise", component: Register },
   { path: "/notice", name: "notice", component: Register },
   { path: "/faq", name: "faq", component: Register },
 ];
 
 const router = createRouter({
-  history: createWebHistory(), // "/" 생략
+  history: createWebHistory(),
   routes,
 });
 
