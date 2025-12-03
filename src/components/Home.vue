@@ -1,56 +1,36 @@
 <template>
   <div class="min-h-screen bg-gray-50">
 
-    <!-- Hero Section -->
-    <section class="bg-blue-600 text-white py-16">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <h1 class="text-3xl font-bold mb-4">고객의 소리</h1>
-        <p class="text-lg text-blue-100 mb-8">
-          여러분의 의견은 더 나은 한국주택금융공사를 만드는 밑거름입니다.
-        </p>
-
-        <router-link
-          to="/voc/register"
-          class="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg shadow hover:bg-blue-50 transition"
-        >
-          민원 신청하기 →
-        </router-link>
+    <section class="py-28">
+      <div class="flex items-center justify-center">
+        <img src="/VOC_logo.png" alt="VOC 로고" />
       </div>
     </section>
 
-    <!-- Quick Menu -->
-    <section class="max-w-6xl mx-auto px-4 py-12">
-      <h2 class="text-xl font-bold mb-6">빠른 서비스</h2>
+    <section class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">빠른 서비스</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <router-link
-          to="/voc/register"
-          class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition border border-gray-100"
-        >
-          <h3 class="text-lg font-semibold mb-2">민원 신청</h3>
-          <p class="text-gray-500 text-sm">고객의 의견을 남겨주세요</p>
+        <router-link to="/voc/question" class="p-8 block bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
+          <img src="/voc-question.png" alt="상담 문의" class="w-full h-50 object-cover" />
+          <h3 class="text-lg font-semibold mb-2 mt-4">상담 문의</h3>
+          <p class="text-gray-500 text-sm">문의 사항이 있으시면 신속하게 답변드리겠습니다.</p>
         </router-link>
 
-        <router-link
-          to="/voc/status"
-          class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition border border-gray-100"
-        >
-          <h3 class="text-lg font-semibold mb-2">민원 조회/수정</h3>
-          <p class="text-gray-500 text-sm">신청한 민원 현황을 확인하세요</p>
+        <router-link to="/voc/complain" class="p-8 block bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
+          <img src="/voc-complain.png" alt="민원 신청" class="w-full h-50 object-cover" />
+          <h3 class="text-lg font-semibold mb-2 mt-4">민원 신청</h3>
+          <p class="text-gray-500 text-sm">주택금융공사와 관련하여 고충, 진정, 이의신청 등 민원사항을 접수하실 수 있습니다.</p>
         </router-link>
 
-        <router-link
-          to="/voc/faq"
-          class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition border border-gray-100"
-        >
-          <h3 class="text-lg font-semibold mb-2">FAQ</h3>
-          <p class="text-gray-500 text-sm">자주 묻는 질문 모음</p>
+        <router-link to="/voc/praise" class="p-8 block bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
+          <img src="/voc-praise.png" alt="FAQ" class="w-full h-50 object-cover" />
+          <h3 class="text-lg font-semibold mb-2 mt-4">칭찬/불친절</h3>
+          <p class="text-gray-500 text-sm">고객님의 칭찬과 격려가 주택금융공사에 큰 힘이 됩니다.</p>
         </router-link>
-
       </div>
     </section>
 
-    <!-- Notice Section -->
     <section class="max-w-6xl mx-auto px-4 py-12">
       <div class="flex justify-between items-center mb-6">
         <h2 class="text-xl font-bold">공지사항</h2>
@@ -73,7 +53,6 @@
       </ul>
     </section>
 
-    <!-- FAQ Section -->
     <section class="max-w-6xl mx-auto px-4 py-12">
       <div class="flex justify-between items-center mb-6">
         <h2 class="text-xl font-bold">자주 묻는 질문</h2>
