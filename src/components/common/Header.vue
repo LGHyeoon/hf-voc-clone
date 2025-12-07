@@ -1,168 +1,462 @@
 <template>
-  <header class="bg-white shadow-sm fixed inset-x-0 top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" style="height:72px;">
-      <div class="h-full flex items-center justify-between">
-        <!-- 헤더 로고 -->
-        <RouterLink to="/" class="flex items-center gap-3">
-          <img src="/HF_logo.jpg" alt="한국주택금융공사 로고" class="h-10 w-auto" />
-          <span class="sr-only">한국주택금융공사 고객의 소리</span>
-        </RouterLink>
+  <!-- header -->
+<header id="krds-header">
+	<!-- 헤더 컨텐츠 영역  -->
+	<div class="header-in">
+		<!-- 헤더 상단 기타메뉴 -->
+		<div class="header-container">
+			<div class="inner">
+				<div class="header-utility">
+					<ul class="utility-list">
+						<li>
+							<a href="#" class="krds-btn small text" target="_blank" title="새 창 열기">
+								메뉴명 <i class="svg-icon ico-go"></i>
+							</a>
+						</li>
+						<li>
+							<div class="krds-drop-wrap">
+								<button type="button" class="krds-btn small text drop-btn">
+									메뉴명 <i class="svg-icon ico-toggle"></i>
+								</button>
+								<div class="drop-menu">
+									<div class="drop-in">
+										<ul class="drop-list">
+											<li><a href="#" class="item-link">메뉴명</a></li>
+											<li><a href="#" class="item-link">메뉴명</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="krds-drop-wrap krds-resize">
+								<button type="button" class="krds-btn small text drop-btn">
+									메뉴명 <i class="svg-icon ico-toggle"></i>
+								</button>
+								<div class="drop-menu">
+									<div class="drop-in">
+										<ul class="drop-list">
+											<li><button type="button" class="item-link sm">메뉴명</button></li>
+											<li><button type="button" class="item-link md active">메뉴명</button></li>
+											<li><button type="button" class="item-link lg">메뉴명</button></li>
+											<li><button type="button" class="item-link xlg">메뉴명</button></li>
+											<li><button type="button" class="item-link xxlg">메뉴명</button></li>
+										</ul>
+										<div class="drop-bottom">
+											<button type="button" class="krds-btn medium text">
+												<i class="svg-icon ico-reset"></i> 초기화
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="krds-drop-wrap">
+								<button type="button" class="krds-btn small text drop-btn">
+									메뉴명 <i class="svg-icon ico-toggle"></i>
+								</button>
+								<div class="drop-menu">
+									<div class="drop-in">
+										<ul class="drop-list">
+											<li><a href="#" class="item-link ico-go" target="_blank" title="새 창 열림">메뉴명</a></li>
+											<li><a href="#" class="item-link ico-go" target="_blank" title="새 창 열림">메뉴명</a></li>
+											<li><a href="#" class="item-link ico-go" target="_blank" title="새 창 열림">메뉴명</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="header-branding">
+					<h2 class="logo">
+						<a href="#">
+							<span class="sr-only">KRDS - Korea Design System</span>
+						</a>
+					</h2>
+					<div class="header-actions">
+						<button type="button" class="btn-navi sch" title="통합검색 레이어">통합검색</button>
+						<a href="#" class="btn-navi login">로그인</a>
+						<button type="button" class="btn-navi join">회원가입</button>
+						<div class="krds-drop-wrap my-drop">
+							<button type="button" class="btn-navi my drop-btn">나의 GOV</button>
+							<div class="drop-menu">
+								<div class="drop-in">
+									<div class="drop-top">
+										<p class="my-name">홍길동님</p>
+										<dl class="my-time">
+											<dt>로그아웃까지 남은 시간</dt>
+											<dd>
+												<span class="time">12:00</span>
+												<button type="button" class="krds-btn medium text">시간 연장</button>
+											</dd>
+										</dl>
+									</div>
+									<ul class="drop-list">
+										<li><a href="#" class="item-link">나의 GOV 홈</a></li>
+										<li><a href="#" class="item-link">나의 신청내역</a></li>
+										<li><a href="#" class="item-link">나의 생활정보</a></li>
+										<li><a href="#" class="item-link">나의 정보관리</a></li>
+									</ul>
+									<div class="drop-bottom">
+										<button type="button" class="krds-btn medium text">
+											<i class="svg-icon ico-logout"></i> 로그아웃
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="btn-navi all" aria-controls="mobile-nav">전체메뉴</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 상단 기타메뉴 -->
+		
+		<!-- 메인메뉴 : 데스크탑 -->
+		<nav class="krds-main-menu">
+			<div class="inner">
+				<ul class="gnb-menu">
+					<li>
+						<button type="button" class="gnb-main-trigger" data-trigger="gnb">1Depth</button>
+						<!-- gnb-toggle-wrap -->
+						<div class="gnb-toggle-wrap">
+							<!-- gnb-main-list -->
+							<div class="gnb-main-list" data-has-submenu="true">
+								<ul>
+									<li>
+										<button type="button" class="gnb-sub-trigger" data-trigger="gnb">2Depth</button>
+										<!-- gnb-sub-list -->
+										<div class="gnb-sub-list">
+											<div class="gnb-sub-content">
+												<h2 class="sub-title">
+													2Depth title
+													<a href="#" class="krds-btn link basic small">
+														<span class="underline">바로가기</span>
+														<i class="svg-icon ico-angle right"></i>
+													</a>
+												</h2>
+												<ul>
+													<li><a href="#">Last depth</a></li>
+													<li><button type="button">Last depth</button></li>
+												</ul>
+											</div>
+											<div class="gnb-sub-banner">
+												<span class="krds-badge bg-secondary">신규 서비스</span>
+												<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+											</div>
+										</div>
+										<!-- //gnb-sub-list -->
+									</li>
+									<li>
+										<button type="button" class="gnb-sub-trigger" data-trigger="gnb">2Depth</button>
+										<!-- gnb-sub-list -->
+										<div class="gnb-sub-list between">
+											<div class="gnb-sub-content">
+												<h2 class="sub-title">
+													2Depth title
+													<a href="#" class="krds-btn link basic small">
+														<span class="underline">바로가기</span>
+														<i class="svg-icon ico-angle right"></i>
+													</a>
+												</h2>
+												<ul>
+													<li><a href="#">Last depth</a></li>
+													<li><button type="button">Last depth</button></li>
+													<li><button type="button">Last depth</button></li>
+												</ul>
+											</div>
+											<div class="gnb-sub-banner">
+												<span class="krds-badge bg-secondary">신규 서비스</span>
+												<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+											</div>
+										</div>
+										<!-- //gnb-sub-list -->
+									</li>
+									<li>
+										<a href="#" class="gnb-sub-trigger is-link" data-trigger="gnb">2Depth</a>
+									</li>
+									<li>
+										<a href="#" class="gnb-sub-trigger is-link external-link" data-trigger="gnb" target="_blank" title="새 창 열림">2Depth</a>
+									</li>
+								</ul>
+							</div>
+							<!-- //gnb-main-list -->
+						</div>
+						<!-- //gnb-toggle-wrap -->
+					</li>
+					
+					<li>
+						<button type="button" class="gnb-main-trigger" data-trigger="gnb">1Depth</button>
+						<!-- gnb-toggle-wrap -->
+						<div class="gnb-toggle-wrap">
+							<!-- gnb-main-list -->
+							<div class="gnb-main-list" data-has-submenu="true">
+								<ul>
+									<li>
+										<button type="button" class="gnb-sub-trigger" data-trigger="gnb">2Depth</button>
+										<!-- gnb-sub-list -->
+										<div class="gnb-sub-list">
+											<div class="gnb-sub-content">
+												<h2 class="sub-title"><span>2Depth title</span></h2>
+												<ul class="type-description">
+													<li>
+														<h3 class="tit">
+															<a href="#" target="_blank" title="새 창 열림">3Depth title <i class="svg-icon ico-go"></i></a>
+														</h3>
+														<p class="txt">메뉴명과 메뉴에 관한 간략한 설명이 표시되는 스타일입니다.</p>
+													</li>
+												</ul>
+											</div>
+											<div class="gnb-sub-banner">
+												<span class="krds-badge bg-secondary">신규 서비스</span>
+												<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+											</div>
+										</div>
+										<!-- //gnb-sub-list -->
+									</li>
+									<li>
+										<button type="button" class="gnb-sub-trigger" data-trigger="gnb">2Depth</button>
+										<!-- gnb-sub-list -->
+										<div class="gnb-sub-list between">
+											<div class="gnb-sub-content">
+												<h2 class="sub-title"><span>2Depth title</span></h2>
+												<ul class="type-description">
+													<li>
+														<h3 class="tit">
+															<a href="#" target="_blank" title="새 창 열림">3Depth title <i class="svg-icon ico-go"></i></a>
+														</h3>
+														<p class="txt">메뉴명과 메뉴에 관한 간략한 설명이 표시되는 스타일입니다.</p>
+													</li>
+												</ul>
+											</div>
+											<div class="gnb-sub-banner">
+												<span class="krds-badge bg-secondary">신규 서비스</span>
+												<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+											</div>
+										</div>
+										<!-- //gnb-sub-list -->
+									</li>
+									<li>
+										<a href="#" class="gnb-sub-trigger is-link" data-trigger="gnb">2Depth</a>
+									</li>
+									<li>
+										<a href="#" class="gnb-sub-trigger is-link external-link" data-trigger="gnb" target="_blank" title="새 창 열림">2Depth</a>
+									</li>
+								</ul>
+							</div>
+							<!-- //gnb-main-list -->
+						</div>
+						<!-- //gnb-toggle-wrap -->
+					</li>
+					
+					<li>
+						<button type="button" class="gnb-main-trigger" data-trigger="gnb">1Depth</button>
+						<!-- gnb-toggle-wrap -->
+						<div class="gnb-toggle-wrap">
+							<!-- gnb-main-list -->
+							<div class="gnb-main-list">
+								<!-- gnb-sub-list -->
+								<div class="gnb-sub-list single-list between">
+									<div class="gnb-sub-content">
+										<h2 class="sub-title"><span>2Depth title</span></h2>
+										<ul>
+											<li><a href="#">Last depth</a></li>
+											<li><a href="#">Last depth</a></li>
+											<li><a href="#">Last depth</a></li>
+											<li><a href="#">Last depth</a></li>
+											<li><a href="#">Last depth</a></li>
+											<li><a href="#">Last depth</a></li>
+											<li><a href="#">Last depth</a></li>
+											<li><a href="#">Last depth</a></li>
+											<li><a href="#">Last depth</a></li>
+										</ul>
+									</div>
+									<div class="gnb-sub-banner">
+										<span class="krds-badge bg-secondary">신규 서비스</span>
+										<button type="button" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></button>
+									</div>
+								</div>
+								<!-- //gnb-sub-list -->
+							</div>
+							<!-- //gnb-main-list -->
+						</div>
+						<!-- //gnb-toggle-wrap -->
+					</li>
+					
+					<li>
+						<a href="#" class="gnb-main-trigger is-link" data-trigger="gnb">링크(anchor)</a>
+					</li>
+					<li>
+						<button type="button" class="gnb-main-trigger is-link" data-trigger="gnb">링크(anchor)</button>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- //메인메뉴 : 데스크탑 -->
+	</div>
+	<!-- //헤더 컨텐츠 영역  -->
+	
+	<!-- 메인메뉴 : 모바일 -->
+	<div id="mobile-nav" class="krds-main-menu-mobile">
+		<div class="gnb-wrap">
+			<!-- gnb-header -->
+			<div class="gnb-header">
+				<!-- gnb-utils -->
+				<div class="gnb-utils">
+					<ul class="utility-list">
+						<li><button type="button" class="krds-btn xsmall text">메뉴명</button></li>
+						<li><button type="button" class="krds-btn xsmall text">메뉴명</button></li>
+					</ul>
+				</div>
+				<!-- //gnb-utils -->
+				<!-- gnb-login -->
+				<div class="gnb-login">
+					<!-- <span class="user">홍길동님</span>
+					<button type="button" class="krds-btn large text"><i class="svg-icon ico-logout"></i> 로그아웃</button> -->
+					<button type="button" class="krds-btn large text"><i class="svg-icon ico-log"></i> 로그인을 해주세요</button>
+				</div>
+				<!-- //gnb-login -->
+				<!-- gnb-service-menu -->
+				<div class="gnb-service-menu">
+					<a href="#" class="link">메뉴명</a>
+					<a href="#" class="link">메뉴명</a>
+					<a href="#" class="link">메뉴명</a>
+					<a href="#" class="link">메뉴명</a>
+				</div>
+				<!-- gnb-service-menu -->
+				<!-- 검색 -->
+				<div class="sch-input">
+					<input type="text" class="krds-input" placeholder="찾고자 하는 메뉴명을 입력해 주세요" title="찾고자 하는 메뉴명 입력" />
+					<button type="button" class="krds-btn medium icon ico-search">
+						<span class="sr-only">검색</span>
+						<i class="svg-icon ico-sch"></i>
+					</button>
+				</div>
+				<!-- //검색 -->
+			</div>
+			<!-- //gnb-header -->
+			
+			<!-- gnb-body -->
+			<div class="gnb-body">
+				<!-- gnb-menu -->
+				<div class="gnb-menu">
+					<div class="menu-wrap">
+						<ul>
+							<li>
+								<a href="#mGnb-anchor1" class="gnb-main-trigger">1Depth</a>
+							</li>
+							<li>
+								<a href="#mGnb-anchor2" class="gnb-main-trigger">1Depth</a>
+							</li>
+							<li>
+								<a href="#mGnb-anchor3" class="gnb-main-trigger">1Depth</a>
+							</li>
+							<li>
+								<a href="#mGnb-anchor4" class="gnb-main-trigger">1Depth</a>
+							</li>
+							<li>
+								<a href="#mGnb-anchor5" class="gnb-main-trigger">1Depth</a>
+							</li>
+						</ul>
+					</div>
+					<div class="submenu-wrap">
+						<div class="gnb-sub-list" id="mGnb-anchor1">
+							<h2 class="sub-title">1Depth</h2>
+							<ul>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+							</ul>
+						</div>
+						<div class="gnb-sub-list" id="mGnb-anchor2">
+							<h2 class="sub-title">1Depth</h2>
+							<ul>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+							</ul>
+						</div>
+						<div class="gnb-sub-list" id="mGnb-anchor3">
+							<h2 class="sub-title">1Depth</h2>
+							<ul>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li>
+									<a href="#" class="gnb-sub-trigger has-depth3">2Depth</a>
+									<div class="depth3-wrap">
+										<ul>
+											<li>
+												<a href="#" class="depth3-trigger has-depth4">3Depth</a>
+												<div class="depth4-wrap">
+													<div class="depth4-head">
+														<button type="button" class="krds-btn icon trigger-prev">
+															<span class="sr-only">이전화면</span>
+															<i class="svg-icon ico-angle left"></i>
+														</button>
+														<button type="button" class="krds-btn icon trigger-close">
+															<span class="sr-only">전체메뉴 닫기</span>
+															<i class="svg-icon ico-popup-close"></i>
+														</button>
+													</div>
+													<ul class="depth4-body">
+														<h4 class="sub-title">4Depth title</h4>
+														<ul class="depth4-ul">
+															<li><a href="#">depth title</a></li>
+															<li><a href="#">depth title</a></li>
+															<li><a href="#">depth title</a></li>
+															<li><a href="#">depth title</a></li>
+														</ul>
+													</ul>
+												</div>
+											</li>
+											<li><a href="#" class="depth3-trigger">3Depth</a></li>
+											<li><a href="#" class="depth3-trigger">3Depth</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="gnb-sub-list" id="mGnb-anchor4">
+							<h2 class="sub-title">1Depth</h2>
+							<ul>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+							</ul>
+						</div>
+						<div class="gnb-sub-list" id="mGnb-anchor5">
+							<h2 class="sub-title">1Depth</h2>
+							<ul>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+								<li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //gnb-menu -->
+				<!-- gnb-bottom -->
+				<div class="gnb-bottom">
+					<a href="#" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></a>
+					<a href="#" class="krds-btn medium text" target="_blank" title="새 창 열기"> 메뉴명 <i class="svg-icon ico-go"></i></a>
+				</div>
+				<!-- //gnb-bottom -->
+			</div>
+			<!-- //gnb-body -->
+			
+			<!-- gnb-close -->
+			<button type="button" class="krds-btn medium icon" id="close-nav">
+				<span class="sr-only">전체메뉴 닫기</span>
+				<i class="svg-icon ico-popup-close"></i>
+			</button>
+			<!-- //gnb-close -->
+		</div>
+	</div>
+	<!-- //메인메뉴 : 모바일 -->
 
-        <!-- 메뉴 리스트 -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium" aria-label="주요">
-          <RouterLink
-            v-for="link in navLinks"
-            :key="link.to"
-            :to="link.to"
-            class="relative py-2 px-1 hover:text-[#004B9B]"
-            :class="{ 'text-[#004B9B]': isActive(link.to) }"
-          >
-            {{ link.label }}
-            <span
-              v-if="isActive(link.to)"
-              class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-[#004B9B] rounded"
-              aria-hidden="true"
-            />
-          </RouterLink>
-        </nav>
-
-        <!-- 오른쪽 부분 (검색 버튼, 로그인 버튼) -->
-        <div class="flex items-center gap-3">
-          <!-- Optional: quick search icon -->
-          <button class="hidden md:inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-100" aria-label="검색">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/>
-            </svg>
-          </button>
-
-          <!-- 로그인 여부에 따른 표시 -->
-          <div v-if="!user" class="hidden md:block">
-            <RouterLink to="/login" class="px-4 py-2 border border-[#004B9B] text-[#004B9B] rounded-md text-sm">로그인</RouterLink>
-          </div>
-
-          <div v-else class="hidden md:flex items-center gap-2 relative">
-            <button @click="toggleUserMenu" ref="userBtn" class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100" :aria-expanded="userMenuOpen.toString()" aria-haspopup="true">
-              <span class="text-sm font-medium">{{ user.name }}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-
-            <!-- 로그인 되었을 경우에는 드롭다운 표시 -->
-            <transition name="fade">
-              <div v-if="userMenuOpen" class="absolute right-0 mt-10 w-48 bg-white border rounded-md shadow-lg py-1" role="menu" @keydown.tab="closeUserMenu">
-                <RouterLink to="/my-vocs" class="block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">나의 신청내역</RouterLink>
-                <RouterLink to="/profile" class="block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">내 정보</RouterLink>
-                <button @click="logout" class="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">로그아웃</button>
-              </div>
-            </transition>
-          </div>
-
-          <!-- 모바일 햄버거 -->
-          <button @click="mobileOpen = !mobileOpen" aria-label="모바일 메뉴" class="md:hidden p-2 rounded-md">
-            <svg v-if="!mobileOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 모바일 화면 -->
-    <transition name="slide-fade">
-      <div v-if="mobileOpen" class="md:hidden bg-white border-t shadow-sm">
-        <div class="px-4 py-4 space-y-2">
-          <RouterLink v-for="link in navLinks" :key="link.to" :to="link.to" class="block px-3 py-2 rounded-md text-base font-medium" @click="mobileOpen = false">
-            {{ link.label }}
-          </RouterLink>
-          <div class="pt-3 border-t mt-2">
-            <RouterLink v-if="!user" to="/login" class="block px-3 py-2 rounded-md text-base font-medium">로그인</RouterLink>
-            <div v-else class="space-y-1">
-              <RouterLink to="/my-vocs" class="block px-3 py-2 rounded-md text-base font-medium" @click="mobileOpen = false">나의 신청내역</RouterLink>
-              <button @click="logout" class="w-full text-left px-3 py-2 rounded-md text-base font-medium">로그아웃</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </transition>
-  </header>
+</header>
+<!-- //header -->
 </template>
-
-<script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-import { useRouter, useRoute, RouterLink } from 'vue-router'
-
-// --- 샘플 상태: 실제로는 Pinia 또는 props로 대체 ---
-const user = ref(null); // 예: { name: '홍길동' } or null
-// 예시: logged in 상태로 테스트하려면 아래 주석 해제
-// user.value = { name: '홍길동' }
-
-const mobileOpen = ref(false);
-const userMenuOpen = ref(false);
-
-const router = useRouter();
-const route = useRoute();
-
-const navLinks = [
-  { label: '홈', to: '/' },
-  { label: '민원/의견 등록', to: '/register' },
-  { label: '나의 신청내역', to: '/my-vocs' },
-  { label: 'FAQ', to: '/faq' }
-]
-
-function isActive(path) {
-  return route.path === path;
-}
-
-function toggleUserMenu() {
-  userMenuOpen.value = !userMenuOpen.value;
-}
-
-// 로그아웃
-function logout() {
-  user.value = null;
-  userMenuOpen.value = false;
-  // 실제 구현: API 호출 + 상태관리 초기화 + 라우터 이동
-  router.push('/');
-}
-
-function onKeydown(e) {
-  if (e.key === 'Escape') {
-    mobileOpen.value = false;
-    userMenuOpen.value = false;
-  }
-}
-
-onMounted(() => {
-  document.addEventListener('keydown', onKeydown)
-});
-
-onBeforeUnmount(() => {
-  document.removeEventListener('keydown', onKeydown)
-});
-</script>
-
-<style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .15s ease;
-}
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
-
-/* 모바일 슬라이드 부분 CSS */
-.slide-fade-enter-active {
-  transition: all .18s cubic-bezier(.2,.8,.2,1);
-}
-.slide-fade-enter-from {
-  transform: translateY(-6px);
-  opacity: 0;
-}
-.slide-fade-leave-to {
-  transform: translateY(-6px);
-  opacity: 0;
-}
-</style>
