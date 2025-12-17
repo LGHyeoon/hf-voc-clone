@@ -1,84 +1,71 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
+	<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+		<!-- 수입 -->
+		<div class="bg-white rounded-xl shadow-sm p-4">
+			<p class="text-sm text-gray-500">수입</p>
+			<p class="text-2xl font-bold text-blue-600 mt-1">
+				2,500,000원
+			</p>
+		</div>
 
-    <section class="py-28">
-      <div class="flex items-center justify-center">
-        <img src="/VOC_logo.png" alt="VOC 로고" />
-      </div>
-    </section>
+		<!-- 지출 -->
+		<div class="bg-white rounded-xl shadow-sm p-4">
+			<p class="text-sm text-gray-500">지출</p>
+			<p class="text-2xl font-bold text-red-500 mt-1">
+				1,420,000원
+			</p>
+		</div>
 
-    <section class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">빠른 서비스</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+		<!-- 잔액 -->
+		<div class="bg-white rounded-xl shadow-sm p-4">
+			<p class="text-sm text-gray-500">잔액</p>
+			<p class="text-2xl font-bold text-gray-800 mt-1">
+				1,080,000원
+			</p>
+		</div>
+	</div>
 
-        <router-link to="/voc/question" class="p-8 block bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
-          <img src="/voc-question.png" alt="상담 문의" class="w-full h-50 object-cover" />
-          <h3 class="text-lg font-semibold mb-2 mt-4">상담 문의</h3>
-          <p class="text-gray-500 text-sm">문의 사항이 있으시면 신속하게 답변드리겠습니다.</p>
-        </router-link>
+	<div class="bg-white rounded-xl shadow-sm p-4">
+		<h2 class="font-semibold mb-4">카테고리별 지출</h2>
 
-        <router-link to="/voc/complain" class="p-8 block bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
-          <img src="/voc-complain.png" alt="민원 신청" class="w-full h-50 object-cover" />
-          <h3 class="text-lg font-semibold mb-2 mt-4">민원 신청</h3>
-          <p class="text-gray-500 text-sm">주택금융공사와 관련하여 고충, 진정, 이의신청 등 민원사항을 접수하실 수 있습니다.</p>
-        </router-link>
+		<ul class="space-y-3">
+			<li class="flex items-center justify-between">
+				<span class="text-sm">식비</span>
+				<span class="text-sm font-medium">420,000원</span>
+			</li>
+			<li class="flex items-center justify-between">
+				<span class="text-sm">교통</span>
+				<span class="text-sm font-medium">120,000원</span>
+			</li>
+			<li class="flex items-center justify-between">
+				<span class="text-sm">쇼핑</span>
+				<span class="text-sm font-medium">300,000원</span>
+			</li>
+		</ul>
+	</div>	
 
-        <router-link to="/voc/praise" class="p-8 block bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
-          <img src="/voc-praise.png" alt="FAQ" class="w-full h-50 object-cover" />
-          <h3 class="text-lg font-semibold mb-2 mt-4">칭찬/불친절</h3>
-          <p class="text-gray-500 text-sm">고객님의 칭찬과 격려가 주택금융공사에 큰 힘이 됩니다.</p>
-        </router-link>
-      </div>
-    </section>
+	<div class="bg-white rounded-xl shadow-sm p-4">
+		<h2 class="font-semibold mb-4">최근 지출</h2>
 
-    <section class="max-w-6xl mx-auto px-4 py-12">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-xl font-bold">공지사항</h2>
-        <router-link to="/notice" class="text-sm text-blue-600 hover:underline">더보기</router-link>
-      </div>
-
-      <ul class="bg-white rounded-xl shadow divide-y">
-        <li class="p-4 hover:bg-gray-50 cursor-pointer">
-          <p class="font-medium">서비스 점검 안내 (11/20 ~ 11/21)</p>
-          <span class="text-sm text-gray-400">2024-11-18</span>
-        </li>
-        <li class="p-4 hover:bg-gray-50 cursor-pointer">
-          <p class="font-medium">개인정보 처리방침 개정 안내</p>
-          <span class="text-sm text-gray-400">2024-10-01</span>
-        </li>
-        <li class="p-4 hover:bg-gray-50 cursor-pointer">
-          <p class="font-medium">민원 접수 처리 지연 안내</p>
-          <span class="text-sm text-gray-400">2024-09-10</span>
-        </li>
-      </ul>
-    </section>
-
-    <section class="max-w-6xl mx-auto px-4 py-12">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-xl font-bold">자주 묻는 질문</h2>
-        <router-link to="/faq" class="text-sm text-blue-600 hover:underline">더보기</router-link>
-      </div>
-
-      <ul class="bg-white rounded-xl shadow divide-y">
-        <li class="p-4 hover:bg-gray-50 cursor-pointer">
-          <p class="font-medium">민원 처리 기간은 얼마나 걸리나요?</p>
-        </li>
-        <li class="p-4 hover:bg-gray-50 cursor-pointer">
-          <p class="font-medium">휴대폰 본인인증 실패 시 어떻게 하나요?</p>
-        </li>
-        <li class="p-4 hover:bg-gray-50 cursor-pointer">
-          <p class="font-medium">민원 처리 결과는 어디서 확인하나요?</p>
-        </li>
-      </ul>
-    </section>
-
-  </div>
+		<table class="w-full text-sm">
+			<tbody class="divide-y">
+			<tr class="h-10">
+				<td class="text-gray-500">09/12</td>
+				<td>식비</td>
+				<td class="text-gray-600">점심</td>
+				<td class="text-right text-red-500 font-medium">
+					-12,000원
+				</td>
+			</tr>
+			<tr class="h-10">
+				<td class="text-gray-500">09/12</td>
+				<td>교통</td>
+				<td class="text-gray-600">버스</td>
+				<td class="text-right text-red-500 font-medium">
+					-1,500원
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
 </template>
-
-<script setup>
-// 현재는 별도 로직 없음, 필요 시 API 연결 예정
-</script>
-
-<style scoped>
-/* Tailwind CSS가 이미 적용되어 있으므로 기본 스타일만으로 충분 */
-</style>
